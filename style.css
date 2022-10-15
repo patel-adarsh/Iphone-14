@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Gilroy", "Helvetica Neue";
+  padding: 10px;
+  background-color: #fff;
+}
+#hero {
+  height: 100%;
+  width: 100%;
+  /* background-color: whitesmoke; */
+}
+.navbar {
+  position: sticky;
+  top: 0px;
+  /* padding: 0px; */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+  /* background-color: rgb(181, 170, 170); */
+}
+.bd {
+  widows: 80%;
+}
+.navbar .icon {
+  font-size: 50px;
+  height: 50px;
+  width: 50px;
+  /* background-color: red; */
+}
+.search-box {
+  /* display: ; */
+  height: 50px;
+  width: 50%;
+  font-size: 50px;
+}
+.search-menu {
+  /* margin-left: -30px; */
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+#hero .mobail-screen {
+  position: relative;
+  margin: 0 auto;
+  height: 50%;
+  width: 100%;
+  /* background-color: aqua; */
+}
+#hero .mobail-screen .mobails img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  height: 300px;
+  width: 250px;
+}
+
+.mobail-screen .heart-button .heart {
+  /* background-color: red; */
+  display: inline-block;
+  height: 30px;
+  margin: 0 10px;
+  position: relative;
+  top: 0;
+  width: 30px;
+}
+#hero .mobail-screen .heart-button .heart #heartred {
+  height: 60px;
+  width: 60px;
+  /* background-color: red; */
+}
+.slides {
+  padding: 0;
+  width: 300px;
+  height: 420px;
+  display: block;
+  margin-top: -20px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.slides * {
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.slides input {
+  display: none;
+}
+
+.slide-container {
+  display: block;
+}
+
+.slide {
+  top: 0;
+  opacity: 0;
+  width: 50%;
+  height: 420px;
+  display: block;
+  position: absolute;
+  transform: scale(0);
+  transition: all 0.7s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav label {
+  width: 200px;
+  height: 100%;
+  display: none;
+  position: absolute;
+  opacity: 0;
+  z-index: 9;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  color: #fff;
+  font-size: 156pt;
+  text-align: center;
+  line-height: 380px;
+  font-family: "Varela Round", sans-serif;
+  /* background-color: rgba(255, 255, 255, .3); */
+  /* text-shadow: 0px 0px 15px rgb(119, 119, 119);   */
+}
+
+.slide:hover + .nav label {
+  opacity: 0.5;
+}
+
+.nav label:hover {
+  opacity: 1;
+}
+
+.nav .next {
+  right: 0;
+}
+
+input:checked + .slide-container .slide {
+  opacity: 1;
+
+  transform: scale(1);
+
+  transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+.nav-dots {
+  width: 100%;
+  bottom: 9px;
+  height: 11px;
+  display: block;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+}
+
+.nav-dots .nav-dot {
+  top: -5px;
+  width: 11px;
+  height: 11px;
+  margin: 0 4px;
+  position: relative;
+  border-radius: 100%;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.nav-dots .nav-dot:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+input#img-1:checked ~ .nav-dots label#img-dot-1,
+input#img-2:checked ~ .nav-dots label#img-dot-2,
+input#img-3:checked ~ .nav-dots label#img-dot-3,
+input#img-4:checked ~ .nav-dots label#img-dot-4,
+input#img-5:checked ~ .nav-dots label#img-dot-5,
+input#img-6:checked ~ .nav-dots label#img-dot-6 {
+  background: rgba(0, 0, 0, 0.8);
+}
+hr {
+  border: 1px solid black;
+  outline: black;
+}
+.heading span {
+  text-decoration: line-through;
+  color: rgb(45, 44, 44);
+  margin-left: 30px;
+  line-height: 20px;
+  gap: 20px;
+}
+h1 {
+  font-size: 20px;
+  color: black;
+}
+.sp-heading {
+  margin: 10px;
+  margin-left: 20px;
+}
+.texts {
+  display: flex;
+  margin: 20px;
+  gap: 10px;
+}
+.description {
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+  width: 100%;
+  /* background-color: rgb(159, 131, 185); */
+}
+.description h1 p {
+  letter-spacing: 1px;
+  color: rgb(178, 175, 175);
+}
+.information {
+  position: relative;
+  overflow: hidden;
+  height: 140px;
+  width: 100%;
+  /* background-color: rgb(159, 131, 185); */
+}
+.information p {
+  margin-top: 20px;
+  overflow: hidden;
+  letter-spacing: 1px;
+}
+#hero2 .information h1 p {
+  margin-top: 20px;
+}
+#hero2 {
+  height: 100%;
+  width: 100%;
+  background-color: whitesmoke;
+}
+.reatings {
+  margin: 20px;
+  display: flex;
+  gap: 10px;
+  /* height: 88px; */
+  /* width: 50px; */
+}
+.reatings span {
+  color: orange;
+  display: flex;
+  align-items: inline-block;
+  justify-content: first baseline;
+}
+.person1 {
+  line-height: 20px;
+  margin: 40px;
+}
+.reveiws .person1 #bluecolor {
+  margin-top: 40px;
+  margin-left: -200px;
+}
+.reveiws .person1 h1 {
+  margin: 10px;
+}
+
+.final-buttons {
+  position: relative;
+  margin-top: 32px;
+  margin-left: 580px;
+}
+.button1 {
+  border: 2px solid orange;
+  background-color: white;
+  color: orange;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.button2 {
+  background-color: orange; /* Green */
+  border: 1px solid orange;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.shere-button {
+  font-size: 20px;
+  position: absolute;
+  top: 15%;
+  left: 60%;
+}
+.buttos-near-mobails {
+  font-size: 25px;
+  height: 30px;
+}
+.heart-button {
+  background-color: #fff;
+  font-size: 25px;
+  height: 30px;
+  position: relative;
+  top: 10%;
+  left: 0%;
+}
+@media screen and (max-width: 992px) {
+  .mobails {
+    margin-top: 100px;
+  }
+  hr {
+    position: relative;
+    top: 10px;
+  }
+  .final-buttons {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    /* height: 100px; */
+    /* top: -10%; */
+    left: -150%;
+    /* margin-left: 10px; */
+  }
+  .button1 {
+    margin-top: -20px;
+    font-size: 10px;
+    padding: -1px;
+    height: 60px;
+    gap: 20px;
+    margin-right: 20px;
+  }
+  .button2 {
+    height: 100px;
+    width: 100px;
+    padding: -1px;
+    /* margin-left: 5px; */
+    margin-top: -20px;
+    font-size: 10px;
+    height: 60px;
+    gap: 20px;
+  }
+  .heading {
+    position: relative;
+    top: 40px;
+  }
+  .dets {
+    position: relative;
+    margin-top: 30px;
+    overflow: hidden;
+  }
+}
